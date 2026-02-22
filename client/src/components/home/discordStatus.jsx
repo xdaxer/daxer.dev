@@ -1,8 +1,9 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "../../context/context";
+
 function DiscordStatus() {
   const { user } = useContext(Context);
+
   const statusColors = {
     online: "bg-[#45A366]",
     idle: "bg-[#FCA81A]",
@@ -10,21 +11,53 @@ function DiscordStatus() {
     offline: "bg-[#84858D]",
   };
 
-  const status = user?.status?.status;
+  const statusLabels = {
+    online: "Online",
+    idle: "Idle",
+    dnd: "Do Not Disturb",
+    offline: "Offline",
+  };
+
+  const status = user?.status?.status || "offline";
 
   return (
-    <div className="w-full h-20 rounded-2xl flex gap-4 items-center text-black p-5 border border-white/10 bg-white/5 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)] ">
-      <div className="w-12 h-12 relative">
-        <img src={user.avatar} alt="avatar" className=" rounded-full border" />
-        <div
-          className={`${
-            statusColors[status] || "bg-gray-500"
-          } border w-3 h-3 rounded-full absolute right-0 top-9`}
-        ></div>
-      </div>
+    <div className="relative w-full h-20 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl shadow-black/20">
+      {/* Decorative background */}
+      <div
+        className="absolute inset-0 opacity-35"
+        style={{
+          backgroundImage: 'url("/nameplate.png")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      {/* Extra soft overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
 
-      <div className="flex flex-col gap-1">
-        <p>xDaxer</p>
+      {/* Content */}
+      <div className="relative z-10 flex h-full items-center gap-3 px-5 text-white">
+        <div className="relative h-12 w-12 shrink-0">
+          <img
+            src={user.avatar}
+            alt="avatar"
+            className="h-12 w-12 rounded-full object-cover border border-white/10"
+          />
+          <span
+            className={`absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-[#111827] ${
+              statusColors[status] || "bg-gray-500"
+            }`}
+          />
+        </div>
+
+        <div className="min-w-0">
+          <p className="text-base font-semibold leading-none text-white">
+            {user?.username || "xDaxer"}
+          </p>
+          <p className="mt-1 text-xs text-white/70">
+            {statusLabels[status] || "Offline"}
+          </p>
+        </div>
       </div>
     </div>
   );

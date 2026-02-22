@@ -3,34 +3,42 @@ import Profile from "../../components/home/profile";
 import Clock from "../../components/home/clock";
 import DiscordStatus from "../../components/home/discordStatus";
 import SpotifyStatus from "../../components/home/spotifyActivities";
+import DicordActivities from "../../components/home/dicordActivities";
 import PhotoGallery from "../../components/home/photoGallery";
-import Skilss from "../../components/home/skills";
+import Skills from "../../components/home/skills";
 import Projects from "../../components/home/projects";
 import QuickLinks from "../../components/home/quickLinks";
 import Contact from "../../components/home/contact";
 
 function HomePage() {
   return (
-    <>
-      <div className="absolute -inset-5 bg-[url('/bg.jpg')] bg-center bg-cover bg-no-repeat blur-[18px] w-full h-full"></div>
-      <div className="flex w-300 h-full p-10  m-auto  gap-3">
-        <div className="flex flex-col gap-3 w-full">
+    <div className="relative min-h-screen overflow-hidden  text-white">
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[url('/bg.jpg')] bg-cover bg-center scale-110 blur-xl opacity-95" />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent" />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-12 gap-4 p-6 lg:p-10">
+        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
           <Profile />
           <DiscordStatus />
-          <SpotifyStatus />
+          <DicordActivities/>
           <PhotoGallery />
         </div>
-        <div className="flex flex-col gap-3 w-full">
+
+        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
           <Clock />
-          <Skilss />
-          <Projects />
-        </div>
-        <div className="flex flex-col gap-3 w-full">
-          <QuickLinks />
+          <Skills />
           <Contact />
         </div>
+
+        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
+          <QuickLinks />
+          <Projects />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
