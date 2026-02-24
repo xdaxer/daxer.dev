@@ -21,8 +21,11 @@ function DiscordStatus() {
   const status = user?.status?.status || "offline";
 
   return (
-    <div className="relative w-full h-20 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl shadow-black/20">
-      {/* Decorative background */}
+    <a
+      target="_blank"
+      href="https://discord.com/users/1001904239058100265"
+      className="relative w-full h-20 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl shadow-black/20"
+    >
       <div
         className="absolute inset-0 opacity-35"
         style={{
@@ -32,10 +35,8 @@ function DiscordStatus() {
           backgroundRepeat: "no-repeat",
         }}
       />
-      {/* Extra soft overlay for readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
 
-      {/* Content */}
       <div className="relative z-10 flex h-full items-center gap-3 px-5 text-white">
         <div className="relative h-12 w-12 shrink-0">
           <img
@@ -59,7 +60,13 @@ function DiscordStatus() {
           </p>
         </div>
       </div>
-    </div>
+
+      <img
+        src="/icons/discord.svg"
+        alt="spotifyIcon"
+        className="h-4 absolute top-2 right-2"
+      />
+    </a>
   );
 }
 

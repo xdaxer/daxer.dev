@@ -2,7 +2,7 @@ import React from "react";
 import Profile from "../../components/home/profile";
 import Clock from "../../components/home/clock";
 import DiscordStatus from "../../components/home/discordStatus";
-import SpotifyStatus from "../../components/home/spotifyActivities";
+import SpotifyStatus from "../../components/home/spotifyStatus";
 import DicordActivities from "../../components/home/dicordActivities";
 import PhotoGallery from "../../components/home/photoGallery";
 import Skills from "../../components/home/skills";
@@ -23,8 +23,8 @@ function HomePage() {
         <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
           <Profile />
           <DiscordStatus />
-          <DicordActivities/>
-          <PhotoGallery />
+          <DicordActivities />
+          <SpotifyStatus/>
         </div>
 
         <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
@@ -34,8 +34,8 @@ function HomePage() {
         </div>
 
         <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
-          <QuickLinks />
           <Projects />
+          <PhotoGallery />
         </div>
       </div>
     </div>

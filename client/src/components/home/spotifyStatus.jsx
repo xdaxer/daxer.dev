@@ -38,8 +38,8 @@ function SpotifyStatus() {
     
   }
 
+
    let artists = data.music.artists.map((artist) => artist.name).join(", ");
-   
 
   return (
     <a
