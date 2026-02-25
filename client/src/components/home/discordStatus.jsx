@@ -22,6 +22,7 @@ function DiscordStatus() {
 
   return (
     <a
+      rel="noopener noreferrer"
       target="_blank"
       href="https://discord.com/users/1001904239058100265"
       className="relative w-full h-20 overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl shadow-black/20"

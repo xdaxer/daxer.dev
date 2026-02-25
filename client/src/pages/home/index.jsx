@@ -24,7 +24,8 @@ function HomePage() {
           <Profile />
           <DiscordStatus />
           <DicordActivities />
-          <SpotifyStatus/>
+                    <SpotifyStatus/>
+           
         </div>
 
         <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">

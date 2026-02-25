@@ -43,9 +43,10 @@ function SpotifyStatus() {
 
   return (
     <a
+      rel="noopener noreferrer"
       target="_blank"
       href={data.music.spotifyUrl}
-      className="w-full flex gap-3 h-20 rounded-2xl flex items-center relative text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
+      className="w-full flex gap-3 h-20 rounded-2xl items-center relative text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]"
     >
       <img
         src={data.music.image[2].url}

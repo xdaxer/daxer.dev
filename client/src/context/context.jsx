@@ -25,7 +25,7 @@ export const Provider = ({ children }) => {
 
     fetchData();
 
-    const intervalId = setInterval(fetchData, 5000);
+    const intervalId = setInterval(fetchData, 20000);
 
     return () => {
       clearInterval(intervalId);
