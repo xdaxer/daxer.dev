@@ -39,7 +39,7 @@ function SpotifyStatus() {
   }
 
 
-   let artists = data.music.artists.map((artist) => artist.name).join(", ");
+   let artists = data.music.artists.map((artist) => artist).join(", ");
 
   return (
     <a
@@ -57,7 +57,7 @@ function SpotifyStatus() {
         <p className="text-base font-semibold leading-none text-white">
           {data.music.name}
         </p>
-        <p className="text-sm text-gray-400">{data.music.artists[0]}</p>
+        <p className="text-sm text-gray-400">{artists}</p>
       </div>
 
       <img
