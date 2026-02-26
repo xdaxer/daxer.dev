@@ -16,7 +16,7 @@ function Skills() {
   ];
 
   return (
-    <div className="w-full h-50 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl shadow-xl shadow-black/20">
+    <div className="w-full h-50 rounded-2xl text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)] ">
       <p className="mb-3 text-lg font-semibold text-white">Skills & Tools</p>
 
       <div className="flex flex-wrap gap-2">

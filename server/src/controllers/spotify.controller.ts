@@ -13,9 +13,9 @@ const spotifyController = async (req: Request, res: Response) => {
       res.status(500).json({ ok: false, error: error.message });
     });
 
-
-
   const music = data?.data.items[0].track;
+
+  console.log(music);
 
   res.json({
     ok: true,
@@ -23,9 +23,8 @@ const spotifyController = async (req: Request, res: Response) => {
       id: music.id,
       name: music.name,
       artists: music.artists.map((artist: any) => artist.name),
-      image:music.album.images,
+      image: music.album.images,
       spotifyUrl: music.external_urls.spotify,
-      
     },
   });
 };

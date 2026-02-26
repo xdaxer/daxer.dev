@@ -5,7 +5,7 @@ const projects = [
   {
     name: "Polymind",
     githubUrl: "https://github.com/xdaxer/portfolio",
-    url: "https://polymind.app",
+    url: "https://polymind.daxer.dev",
     icon: "/projects/polymind.svg",
     Techs: ["react", "express", "mongodb", "nodejs"],
     status: "Completed",
@@ -48,6 +48,7 @@ const projects = [
       "Store chat history and preserve selected model flow",
     ],
   },
+  
 ];
 function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -65,7 +66,7 @@ function Projects() {
 
   
   return (
-    <div className="w-full flex flex-col gap-1 h-100 overflow-y-auto contact-scroll rounded-2xl  text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+    <div className="w-full flex flex-col gap-1 h-70 overflow-y-auto contact-scroll rounded-2xl  text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
       <p className=" text-lg font-semibold text-white">Projects</p>
 
       <ProjectModal

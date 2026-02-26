@@ -6,7 +6,7 @@ function Profile() {
   const { user } = useContext(Context);
 
   return (
-    <div className="w-full h-65 p-2  rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl shadow-black/20  flex flex-col items-center justify-center gap-3 ">
+    <div className="w-full h-65 p-2  rounded-2xl  border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]   flex flex-col items-center justify-center gap-3 ">
       <img
         src={user.avatar}
         alt="Profile avatar"
@@ -37,7 +37,6 @@ function Profile() {
         </a>
 
         <a
-        
           href="https://github.com/xdaxer"
           target="_blank"
           rel="noopener noreferrer"
