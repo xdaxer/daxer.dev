@@ -66,7 +66,7 @@ function Projects() {
 
   
   return (
-    <div className="w-full flex flex-col gap-1 h-70 overflow-y-auto contact-scroll rounded-2xl  text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
+    <div className="w-full flex flex-col gap-1 lg:h-70 overflow-y-auto contact-scroll rounded-2xl text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]">
       <p className=" text-lg font-semibold text-white">Projects</p>
 
       <ProjectModal

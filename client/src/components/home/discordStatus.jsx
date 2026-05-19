@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { Context } from "../../context/context";
 
 function DiscordStatus() {
-  const { user } = useContext(Context);
+  const { user, API } = useContext(Context);
+  const avatarUrl = `${API.defaults.baseURL}/me/avatar`;
 
   const statusColors = {
     online: "bg-[#45A366]",
@@ -41,7 +42,7 @@ function DiscordStatus() {
       <div className="relative z-10 flex h-full items-center gap-3 px-5 text-white">
         <div className="relative h-12 w-12 shrink-0">
           <img
-            src={user.avatar}
+            src={avatarUrl}
             alt="avatar"
             className="h-12 w-12 rounded-full object-cover border border-white/10"
           />

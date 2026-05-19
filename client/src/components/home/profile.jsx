@@ -3,12 +3,13 @@ import { Context } from "../../context/context";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
 
 function Profile() {
-  const { user } = useContext(Context);
+  const { user, API } = useContext(Context);
+  const avatarUrl = `${API.defaults.baseURL}/me/avatar`;
 
   return (
-    <div className="w-full h-65 p-2  rounded-2xl  border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]   flex flex-col items-center justify-center gap-3 ">
+    <div className="w-full py-6 px-4 rounded-2xl border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center gap-3">
       <img
-        src={user.avatar}
+        src={avatarUrl}
         alt="Profile avatar"
         className="h-24 w-24 rounded-2xl object-cover border border-white/10 shadow-md shadow-black/20"
       />

@@ -19,21 +19,21 @@ function HomePage() {
         <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent" />
       </div>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-12 gap-4 p-6 lg:p-10">
-        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
+      <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-12 gap-3 sm:gap-4 p-3 sm:p-6 lg:p-10">
+        <div className="col-span-12 lg:col-span-4 flex flex-col gap-3 sm:gap-4">
           <Profile />
           <DiscordStatus />
           <DicordActivities />
           <SpotifyStatus />
         </div>
 
-        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
+        <div className="col-span-12 lg:col-span-4 flex flex-col gap-3 sm:gap-4">
           <Clock />
           <Skills />
           <Contact />
         </div>
 
-        <div className="col-span-12 lg:col-span-4 flex flex-col gap-4">
+        <div className="col-span-12 lg:col-span-4 flex flex-col gap-3 sm:gap-4">
           <Projects />
           <PhotoGallery />
         </div>

@@ -13,7 +13,7 @@ function Clock() {
   }, []);
 
   return (
-    <div className="w-full h-25 rounded-2xl text-black p-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)]   flex flex-col items-center justify-center text-white">
+    <div className="w-full py-5 rounded-2xl text-black px-5 border border-white/10 bg-black/15 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center text-white">
       <p
         className="text-3xl font-semibold tracking-wide leading-none"
         style={{ fontFamily: "Domine" }}

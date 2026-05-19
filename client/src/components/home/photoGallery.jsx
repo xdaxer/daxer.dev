@@ -8,7 +8,7 @@ function PhotoGallery() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="w-full h-46 rounded-2xl border border-white/10 bg-black/15"
+      className="w-full h-40 sm:h-46 rounded-2xl border border-white/10 bg-black/15"
     ></div>
   );
 }
