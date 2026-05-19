@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const Context = createContext();
 const API = axios.create({
-  baseURL: "https://api.daxer.dev/portfolio/",
+  baseURL: "https://api.daxer.dev/portfolio",
 
 })
 export const Provider = ({ children }) => {
